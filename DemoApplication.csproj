@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DemoApplication.ApiModels\**" />
+    <Compile Remove="DemoApplication.BusinessServices.Interfaces\**" />
+    <Compile Remove="DemoApplication.BusinessService\**" />
+    <Compile Remove="DemoApplication\**" />
+    <Content Remove="DemoApplication.ApiModels\**" />
+    <Content Remove="DemoApplication.BusinessServices.Interfaces\**" />
+    <Content Remove="DemoApplication.BusinessService\**" />
+    <Content Remove="DemoApplication\**" />
+    <EmbeddedResource Remove="DemoApplication.ApiModels\**" />
+    <EmbeddedResource Remove="DemoApplication.BusinessServices.Interfaces\**" />
+    <EmbeddedResource Remove="DemoApplication.BusinessService\**" />
+    <EmbeddedResource Remove="DemoApplication\**" />
+    <None Remove="DemoApplication.ApiModels\**" />
+    <None Remove="DemoApplication.BusinessServices.Interfaces\**" />
+    <None Remove="DemoApplication.BusinessService\**" />
+    <None Remove="DemoApplication\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.18.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.4.0" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="DemoApplication.ApiModels\DemoApplication.ApiModels.csproj" />
+    <ProjectReference Include="DemoApplication.BusinessServices.Interfaces\DemoApplication.BusinessServices.Interfaces.csproj" />
+    <ProjectReference Include="DemoApplication.BusinessService\DemoApplication.BusinessService.csproj" />
+  </ItemGroup>
+
+
+</Project>
